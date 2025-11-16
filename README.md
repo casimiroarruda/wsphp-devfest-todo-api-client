@@ -1,75 +1,74 @@
-# Nuxt Minimal Starter
+# 🚀 Cliente da API To-Do em PHP (php-todo-api-client)
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Este é o projeto frontend (cliente web) desenvolvido para o workshop de introdução ao PHP Moderno. Ele utiliza **Nuxt 4** e **TailwindCSS** para criar uma interface limpa, similar ao Google Tasks, e é projetado para consumir a API To-Do que será construída em PHP.
 
-## Setup
+## ✨ Visão Geral
 
-Make sure to install dependencies:
+O objetivo deste cliente é fornecer uma interface de usuário (UI) funcional para que os participantes do workshop possam testar a API PHP que estão construindo. Ele se conectará ao backend PHP local para listar, criar, e (opcionalmente) atualizar e deletar tarefas.
 
-```bash
-# npm
-npm install
+## 🛠️ Tecnologias Utilizadas
 
-# pnpm
-pnpm install
+* **[Nuxt 4](https://nuxt.com/)**: O framework frontend (baseado em Vue 3).
+* **[pnpm](https://pnpm.io/)**: O gerenciador de pacotes.
+* **[TailwindCSS](https://tailwindcss.com/)**: Para estilização utility-first.
+* **[@nuxt/icon](https://github.com/nuxt-modules/icon)**: Para ícones SVG fáceis de usar.
 
-# yarn
-yarn install
+---
 
-# bun
-bun install
-```
+## 🚀 Rodando o Projeto Localmente
 
-## Development Server
+Siga estes passos para executar o cliente frontend em sua máquina.
 
-Start the development server on `http://localhost:3000`:
+### Pré-requisitos
 
-```bash
-# npm
-npm run dev
+Antes de começar, garanta que você tenha os seguintes softwares instalados:
+* [Node.js](https://nodejs.org/) (versão 18 ou superior)
+* [pnpm](https://pnpm.io/installation) (Gerenciador de pacotes)
 
-# pnpm
-pnpm dev
+### Passos
 
-# yarn
-yarn dev
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/SEU-USUARIO/php-todo-api-client.git](https://github.com/SEU-USUARIO/php-todo-api-client.git)
+    cd php-todo-api-client
+    ```
+    *(Lembre-se de alterar `SEU-USUARIO` para o seu nome de usuário/organização no GitHub)*
 
-# bun
-bun run dev
-```
+2.  **Instale as dependências:**
+    ```bash
+    pnpm install
+    ```
 
-## Production
+3.  **Configure o arquivo de ambiente (.env):**
+    Este projeto precisa saber onde a sua API PHP está rodando. Copie o arquivo de exemplo para criar sua configuração local:
 
-Build the application for production:
+    ```bash
+    cp .env.example .env
+    ```
 
-```bash
-# npm
-npm run build
+    Agora, abra o arquivo `.env` e confirme que a `NUXT_PUBLIC_API_URL` aponta para o local onde sua API PHP estará rodando. O padrão do workshop é `http://localhost:8000`.
 
-# pnpm
-pnpm build
+    ```env
+    # .env
+    # Esta porta (8000) deve ser a mesma onde você
+    # rodará o servidor PHP (ex: php -S localhost:8000)
+    NUXT_PUBLIC_API_URL="http://localhost:8000"
+    ```
 
-# yarn
-yarn build
+4.  **Inicie o servidor de desenvolvimento:**
+    ```bash
+    pnpm dev
+    ```
 
-# bun
-bun run build
-```
+5.  **Pronto!**
+    Abra seu navegador e acesse [http://localhost:3000](http://localhost:3000). Você verá a interface do cliente To-Do.
 
-Locally preview production build:
+---
 
-```bash
-# npm
-npm run preview
+## 🔗 Conectando com o Backend
 
-# pnpm
-pnpm preview
+Este cliente **não** funcionará corretamente a menos que a API PHP esteja rodando simultaneamente.
 
-# yarn
-yarn preview
+Certifique-se de que, em outro terminal, você esteja executando o servidor PHP (do projeto backend) na porta definida no seu arquivo `.env` (ex: `localhost:8000`).
 
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+➡️ **Link para o repositório da API PHP:** `[COLOQUE AQUI A URL DO SEU REPOSITÓRIO BACKEND]`
